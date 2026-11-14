@@ -171,7 +171,7 @@ O-O
 - The King remains on g1.
 - The Rook moves from h1 to f1.
 - Castling consumes the turn.
-- Both castling rights are lost.
+- All remaining castling rights are lost; no castling rights remain.
 
 **Expected Final Placement:**
 
@@ -215,7 +215,7 @@ O-O
 - Castling is legal.
 - The King moves to g1.
 - The Rook remains on f1.
-- Both castling rights are lost.
+- All remaining castling rights are lost; no castling rights remain.
 
 **Expected Final Placement:**
 
