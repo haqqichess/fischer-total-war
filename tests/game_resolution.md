@@ -460,7 +460,7 @@ Re1xe8
 
 **Status:** NOT RUN
 
-### FTW-GAM-019 — Automatic Draws Are Evaluated After Non-Terminal Moves
+### FTW-GAM-019 — Bishop-Lock Is Evaluated After a Non-Terminal Move
 
 **Initial Position:**
 
@@ -488,7 +488,7 @@ The capture removes Black's Knight. The resulting position contains only the Whi
 - The game ends as a draw if either condition is satisfied.
 - Mutual immobility is evaluated separately at the beginning of the next turn, after the active player is found to have no legal moves.
 
-**Status:** BLOCKED — A verified fixture is required.
+**Status:** NOT RUN
 
 ### FTW-GAM-020 — Threefold Claim Is Available Before a Forced Pass
 
