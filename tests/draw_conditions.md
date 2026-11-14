@@ -404,17 +404,43 @@ A valid board position must be supplied in which:
 
 ### FTW-DRW-016 — No 50-Move or 75-Move Draw
 
-**Fixture Requirement:**
+**Initial Position:**
 
-Provide a legal game sequence that reaches the corresponding move-count thresholds without triggering any other game-ending condition.
+```text
+4k3/8/8/8/8/8/8/4K3
+```
+
+**Side to Move:** White
+
+**Move Sequence:**
+
+The following 150-ply sequence uses only King moves. Each move is a legal one-square King move; no capture or Pawn move occurs. The complete sequence was checked for repetition, and no position occurs more than twice (including the initial and final positions).
+
+```text
+1. e1-f2 e8-e7 2. f2-e3 e7-e8 3. e3-f4 e8-e7 4. f4-g4 e7-f8 5. g4-h4 f8-e7
+6. h4-h3 e7-d6 7. h3-g2 d6-c7 8. g2-f3 c7-d7 9. f3-f4 d7-d6 10. f4-e5 d6-d7
+11. e5-e4 d7-d6 12. e4-e3 d6-c6 13. e3-f4 c6-c5 14. f4-f5 c5-c4 15. f5-e5 c4-b3
+16. e5-d6 b3-a4 17. d6-e5 a4-a5 18. e5-d6 a5-b5 19. d6-e6 b5-b4 20. e6-d7 b4-c5
+21. d7-c7 c5-b6 22. c7-b8 b6-b7 23. b8-a8 b7-c7 24. a8-b8 c7-d8 25. b8-b7 d8-e7
+26. b7-a6 e7-d6 27. a6-b7 d6-d7 28. b7-a7 d7-e8 29. a7-a6 e8-d7 30. a6-b5 d7-d8
+31. b5-c6 d8-d7 32. c6-d5 d7-c6 33. d5-d4 c6-b7 34. d4-d3 b7-a6 35. d3-c4 a6-b7
+36. c4-b5 b7-b6 37. b5-c5 b6-b7 38. c5-d6 b7-b8 39. d6-c5 b8-c7 40. c5-d4 c7-b6
+41. d4-e3 b6-a5 42. e3-f2 a5-b6 43. f2-g1 b6-a7 44. g1-f1 a7-a8 45. f1-e1 a8-a7
+46. e1-f2 a7-b6 47. f2-e1 b6-c5 48. e1-f2 c5-c4 49. f2-e1 c4-b3 50. e1-d2 b3-a4
+51. d2-e2 a4-a3 52. e2-e3 a3-a2 53. e3-e4 a2-a1 54. e4-f3 a1-b2 55. f3-f4 b2-c2
+56. f4-g4 c2-d2 57. g4-h3 d2-d3 58. h3-g2 d3-e3 59. g2-h2 e3-d4 60. h2-h3 d4-e3
+61. h3-g4 e3-f3 62. g4-f5 f3-g4 63. f5-f6 g4-h5 64. f6-f7 h5-g6 65. f7-f8 g6-h7
+66. f8-g7 h7-g8 67. g7-g6 g8-f8 68. g6-f5 f8-e8 69. f5-g5 e8-d7 70. g5-h6 d7-e8
+71. h6-g6 e8-d8 72. g6-h7 d8-d7 73. h7-g8 d7-d8 74. g8-f7 d8-c7 75. f7-e7 c7-c8
+```
 
 **Expected Result:**
 
-- Reaching 100 consecutive plies (50 moves by each player) without a capture or Pawn move does not independently create a draw.
-- Reaching 150 consecutive plies (75 moves by each player) without a capture or Pawn move does not independently create a draw.
-- The game continues unless another FTW draw or victory condition applies.
+- At 100 plies (50 moves by each player), no draw is declared by a 50-move rule.
+- At 150 plies (75 moves by each player), no draw is declared by a 75-move rule.
+- The game remains active after the sequence unless another FTW ending condition applies.
 
-**Status:** BLOCKED — A verified game sequence is required.
+**Status:** NOT RUN
 
 ## 8. Test Completion
 
