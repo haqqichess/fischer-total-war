@@ -476,13 +476,12 @@ Mutual immobility is also an automatic draw, but it is evaluated at the beginnin
 At the beginning of a turn:
 
 1. Confirm that the game has not already ended.
-2. Evaluate the position-based automatic draw conditions under Section 11.2.
-3. Allow the player whose turn it is to claim threefold repetition if the current position has occurred at least three times.
-4. Generate all legal FTW moves for that player.
-5. If at least one legal move exists, the player must make a legal move.
-6. If no legal move exists, evaluate mutual immobility under Section 8.1.
-7. If mutual immobility applies, the game ends as a draw without recording a pass.
-8. Otherwise, record a forced pass, switch the side to move, record the resulting position, and evaluate the position-based automatic draw conditions again.
+2. Allow the player whose turn it is to claim threefold repetition if the current position has occurred at least three times.
+3. Generate all legal FTW moves for that player.
+4. If at least one legal move exists, the player must make a legal move.
+5. If no legal move exists, evaluate mutual immobility under Section 8.1.
+6. If mutual immobility applies, the game ends as a draw without recording a pass.
+7. Otherwise, record a forced pass, switch the side to move, record the resulting position, and evaluate the position-based automatic draw conditions again.
 
 This procedure repeats until the game ends.
 
