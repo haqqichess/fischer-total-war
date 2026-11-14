@@ -208,17 +208,16 @@ If a move eliminates the opponent's final unit, the game ends immediately. No ad
 
 ## 8. Automatic Draw Evaluation
 
-After a completed non-terminal normal move or forced pass, automatic draw conditions are evaluated in the following order:
+After a completed non-terminal normal move or forced pass, evaluate the position-based automatic draw conditions in this order:
 
 1. Bishop-lock.
 2. Fivefold repetition.
-3. Mutual immobility.
 
-If one or more automatic draw conditions are satisfied, the game ends as a draw.
+If either condition is satisfied, the game ends as a draw. If both are satisfied simultaneously, Bishop-lock may be recorded as the primary reason.
 
-If multiple automatic draw conditions are satisfied simultaneously, the game still has only one result: a draw. The first condition in the list may be recorded as the primary reason.
+Mutual immobility is also automatic, but it is evaluated at the beginning of a turn only after the active player has been found to have no legal moves. The opponent's legal moves are then checked in the hypothetical-pass position described in Section 5.1. If neither player can move, the game ends without recording an actual pass; otherwise, the active player must make a forced pass.
 
-Threefold repetition is not automatic and must be claimed by the player whose turn it is, before making a normal move or forced pass.
+Threefold repetition is not automatic. The player whose turn it is may claim it while the current position is repeated, before making a normal move or a forced pass. The claim opportunity is considered before the no-legal-move check and any resulting forced pass.
 
 ## 9. Draw Conditions Not Used in v1.0-alpha
 
