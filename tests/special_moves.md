@@ -116,7 +116,7 @@ Usable: No
 **Initial Position:**
 
 ```text
-4k3/3p4/8/4P3/P7/8/8/4K3
+4k3/3p4/8/4P3/8/8/P7/4K3
 ```
 
 **Side to Move:** Black
