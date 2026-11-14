@@ -231,7 +231,100 @@ All other position-identity fields are equal: no castling rights and no usable e
 
 **Status:** NOT RUN
 
-## 7. Test Completion
+## 7. En Passant and Promotion
+
+### FTW-EDGE-011 — En Passant Captures the Advancing Pawn
+
+**Initial Position:**
+
+```text
+4k3/8/8/3pP3/8/8/8/4K3
+```
+
+**Side to Move:** White
+
+**En Passant State:** Black's Pawn has just advanced from d7 to d5. The target square is d6 and the opportunity is usable.
+
+**Action:** `e5xd6 e.p.`
+
+**Expected Result:**
+
+- The move is legal.
+- The White Pawn moves from e5 to d6.
+- The Black Pawn on d5 is removed.
+- The White Pawn occupies d6.
+
+**Status:** NOT RUN
+
+### FTW-EDGE-012 — En Passant Expires After the Eligible Turn
+
+**Initial Position:**
+
+```text
+4k3/8/8/3pP3/8/8/8/4K3
+```
+
+**Side to Move:** White
+
+**En Passant State:** Target d6, usable by the White Pawn on e5.
+
+**Action:** White makes the ordinary King move `Ke1-e2` instead of capturing en passant.
+
+**Expected Result:**
+
+- The King move is legal.
+- The en passant opportunity expires when White's turn ends.
+- Black cannot capture the White Pawn en passant on the following turn.
+- The board retains both Pawns on d5 and e5.
+
+**Status:** NOT RUN
+
+### FTW-EDGE-013 — Pawn May Promote to Each Permitted Piece Type
+
+**Initial Position:**
+
+```text
+7k/P7/8/8/8/8/8/7K
+```
+
+**Side to Move:** White
+
+**Actions:** Test each action independently from the initial position.
+
+```text
+a7-a8=Q
+a7-a8=R
+a7-a8=B
+a7-a8=N
+```
+
+**Expected Result:**
+
+- Each promotion choice is legal.
+- The Pawn is replaced on a8 by the selected piece.
+- The promoted piece becomes active immediately.
+
+**Status:** NOT RUN
+
+### FTW-EDGE-014 — Pawn Cannot Promote to a King
+
+**Initial Position:**
+
+Use the position from FTW-EDGE-013.
+
+**Side to Move:** White
+
+**Action:** Attempt `a7-a8=K`.
+
+**Expected Result:**
+
+- The action is illegal.
+- The Pawn remains on a7.
+- The board and side to move remain unchanged.
+
+**Status:** NOT RUN
+
+## 8. Test Completion
 
 These cases supplement, and do not replace, the existing movement, castling,
 draw-condition, and game-resolution specifications.
