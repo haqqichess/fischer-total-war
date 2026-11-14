@@ -60,7 +60,7 @@ This revision addresses ambiguities and inconsistencies identified during a stru
 
 ### Test Specifications
 
-- Added focused edge-case coverage for sliding-piece obstruction, capture stopping, Knight occupancy, Black Pawn direction, Pawn restrictions, and side-to-move position identity.
+- Added focused edge-case coverage for sliding-piece obstruction, capture stopping, Knight occupancy, Black Pawn direction, Pawn restrictions, side-to-move position identity, en passant capture and expiration, and all permitted promotion choices.
 - Replaced vague promotion examples with reproducible board positions and explicit promotion choices.
 - Clarified the 50-move and 75-move test thresholds as 100 and 150 consecutive plies respectively.
 - Added direct links to all test specifications from the README.
