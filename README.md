@@ -76,6 +76,18 @@ For the complete rules, see [RULES.md](RULES.md).
 | [CONTRIBUTING.md](CONTRIBUTING.md) | How to submit feedback and proposals |
 | [LICENSE](LICENSE) | License for project documentation |
 
+## Test Specifications
+
+The repository includes position-based test specifications for movement, castling, draw conditions, game resolution, and edge cases:
+
+- [Movement and captures](tests/movement.md)
+- [Chess960 castling](tests/castling.md)
+- [Draw conditions and repetition](tests/draw_conditions.md)
+- [Turn management and game resolution](tests/game_resolution.md)
+- [Additional edge cases](tests/edge_cases.md)
+
+These documents define expected behavior; they are not an executable test runner. Cases marked `NOT RUN` or `BLOCKED` have not been verified against a software implementation.
+
 ## Playtesting and Feedback
 
 FTW is still being developed through discussion, testing, and review.
