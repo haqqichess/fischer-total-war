@@ -136,7 +136,7 @@ Ng1-f3
 **Expected Result:**
 
 - The move is legal.
-- The WHite king on e1 is attacked by the Black Rook on a1.
+- The White King on e1 is attacked by the Black Rook on a1.
 - The White Knight may move normally.
 - No self-check restriction is applied.
 
@@ -455,18 +455,22 @@ e4xd5
 
 **Status:** NOT RUN
 
-### FTW-MOV-019 — Pawn May Capture the Opposing King
+### FTW-MOV-019 — Pawn May Capture the Opposing King and Promote
 
 **Initial Position:**
 
-A White Pawn on e7, a Black King on d8, and at least one other Black unit elsewhere on the board.
+```text
+3k3r/4P3/8/8/8/8/8/K7
+```
 
 **Side to Move:** White
+
+**Units:** White Pawn on e7; Black King on d8; Black Rook on h8; White King on a1.
 
 **Action:**
 
 ```text
-e7xd8
+e7xd8=Q
 ```
 
 **Expected Result:**
