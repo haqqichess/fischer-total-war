@@ -86,17 +86,22 @@ b6k/8/8/8/8/8/8/2B1K3
 
 **Status:** NOT RUN
 
-### FTW-DRW-004 — Bishop-Lock Requires Both Players to Have Bishops
+### FTW-DRW-004 — Total Elimination Takes Priority Over Bishop-Lock
 
-**Initial Position:**
+**Resulting Position:**
 
-A board containing only White Bishops and no Black units.
+A position reached after a completed move in which:
+
+- White has at least one Bishop remaining.
+- Black has zero units remaining.
+- No Black unit remains on the board.
 
 **Expected Result:**
 
-- Bishop-lock is not used.
-- Total elimination takes priority.
-- The result is a White victory, not a draw.
+- Bishop-lock is not declared.
+- Black has already been eliminated.
+- White wins by total elimination.
+- No draw evaluation replaces the victory result.
 
 **Status:** NOT RUN
 
