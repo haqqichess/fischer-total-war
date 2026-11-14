@@ -11,11 +11,14 @@ FTW combines the randomized starting positions of Chess960 with a different appr
 
 ## Project Status
 
-**Version:** v1.0-alpha  
+**Version:** v1.0-alpha — Red Team Revision Draft  
 **Status:** Experimental — Open for Playtesting  
-**Creator:** Haqqi Muazzam
+**Creator:** Haqqi Muazzam  
+**Last revised:** November 14, 2026
 
-The current rules are a working draft. They are open to testing, discussion, and improvement. They should not be treated as a finalized competitive standard.
+This revision incorporates a detailed review of the rules, including legal moves, Chess960 castling, forced passes, repetition, and draw conditions.
+
+The rules remain experimental. Further validation through implementation tests and practical games is required before a stable release.
 
 ## The Objective
 
