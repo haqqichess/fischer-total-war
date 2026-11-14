@@ -109,7 +109,13 @@ A position reached after a completed move in which:
 
 **Initial Position:**
 
-A position with Bishops on opposite square colors and one additional surviving Knight.
+```text
+b7/8/8/8/4N3/8/8/2B5
+```
+
+**Side to Move:** White
+
+**Units:** White Bishop on c1, White Knight on e4, Black Bishop on a8. No other units remain.
 
 **Expected Result:**
 
@@ -404,8 +410,8 @@ Provide a legal game sequence that reaches the corresponding move-count threshol
 
 **Expected Result:**
 
-- Reaching 50 moves without a capture or Pawn move does not independently create a draw.
-- Reaching 75 moves without a capture or Pawn move does not independently create a draw.
+- Reaching 100 consecutive plies (50 moves by each player) without a capture or Pawn move does not independently create a draw.
+- Reaching 150 consecutive plies (75 moves by each player) without a capture or Pawn move does not independently create a draw.
 - The game continues unless another FTW draw or victory condition applies.
 
 **Status:** BLOCKED — A verified game sequence is required.
