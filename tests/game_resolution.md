@@ -131,11 +131,13 @@ g7xh8=Q
 
 **Initial Position:**
 
-A White Pawn on g7 can capture a Black Rook on h8 and promote.
-
-Black also has a King or another surviving unit elsewhere on the board.
+```text
+1k5r/6P1/8/8/8/8/8/K7
+```
 
 **Side to Move:** White
+
+**Units:** White Pawn on g7 and King on a1; Black King on b8 and Rook on h8.
 
 **Action:**
 
