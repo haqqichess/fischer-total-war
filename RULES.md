@@ -462,28 +462,27 @@ Promotion is completed before the elimination check.
 
 ### 11.2 Automatic Draw Evaluation
 
-After a non-terminal move or forced pass, evaluate automatic draw conditions in this order:
+After a non-terminal normal move or forced pass has been completed, evaluate the position-based automatic draw conditions in this order:
 
 1. Bishop-lock.
 2. Fivefold repetition.
-3. Mutual immobility.
 
-If more than one automatic draw condition is satisfied at the same time, the result is still a draw.
+If both conditions are satisfied at the same time, the result is still a draw. For record-keeping, Bishop-lock may be recorded as the primary reason.
 
-For record-keeping, the first condition in the list may be recorded as the primary reason.
+Mutual immobility is also an automatic draw, but it is evaluated at the beginning of a turn after the active player's legal moves have been generated and found to be empty. It is not evaluated as a substitute for the position-based checks above.
 
 ### 11.3 Beginning a Turn
 
 At the beginning of a turn:
 
 1. Confirm that the game has not already ended.
-2. Confirm that no automatic draw condition applies.
+2. Evaluate the position-based automatic draw conditions under Section 11.2.
 3. Allow the player whose turn it is to claim threefold repetition if the current position has occurred at least three times.
 4. Generate all legal FTW moves for that player.
 5. If at least one legal move exists, the player must make a legal move.
 6. If no legal move exists, evaluate mutual immobility under Section 8.1.
-7. If mutual immobility does not apply, record a forced pass.
-8. Switch the side to move, record the resulting position, and evaluate automatic draws again.
+7. If mutual immobility applies, the game ends as a draw without recording a pass.
+8. Otherwise, record a forced pass, switch the side to move, record the resulting position, and evaluate the position-based automatic draw conditions again.
 
 This procedure repeats until the game ends.
 
