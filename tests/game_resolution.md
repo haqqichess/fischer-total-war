@@ -467,8 +467,9 @@ Complete the move.
 - The relevant game state is updated.
 - The side to move changes.
 - The resulting position is recorded.
-- Automatic draw conditions are evaluated.
-- The game ends as a draw if one is satisfied.
+- Bishop-lock and fivefold repetition are evaluated as position-based automatic draw conditions.
+- The game ends as a draw if either condition is satisfied.
+- Mutual immobility is evaluated separately at the beginning of the next turn, after the active player is found to have no legal moves.
 
 **Status:** BLOCKED — A verified fixture is required.
 
