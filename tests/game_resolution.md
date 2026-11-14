@@ -453,13 +453,21 @@ Re1xe8
 
 ### FTW-GAM-019 — Automatic Draws Are Evaluated After Non-Terminal Moves
 
-**Initial State:**
+**Initial Position:**
 
-Provide a valid position where a legal move creates an automatic draw condition without eliminating the opponent's final unit.
+```text
+b7/8/8/8/8/8/3n4/2B5
+```
+
+**Side to Move:** White
 
 **Action:**
 
-Complete the move.
+```text
+Bc1xd2
+```
+
+The capture removes Black's Knight. The resulting position contains only the White Bishop on d2 and Black Bishop on a8, on opposite square colors.
 
 **Expected Result:**
 
