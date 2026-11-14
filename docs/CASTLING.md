@@ -7,82 +7,65 @@ The procedure keeps the familiar final arrangement of the King and Rook while re
 
 ## 1. Castling Destinations
 
-Castling has two possible directions.
+FTW uses two castling directions.
 
 | Type | King destination | Rook destination |
 |---|---|---|
-| Kingside | g-file | f-file |
-| Queenside | c-file | d-file |
+| G-side castling | g-file | f-file |
+| C-side castling | c-file | d-file |
 
-The selected Rook is the original Rook on that side of the King in the starting position.
+The original Rook on the higher-file side of the King is assigned to G-side castling.
+
+The original Rook on the lower-file side of the King is assigned to C-side castling.
+
+These destinations apply to both White and Black.
 
 ## 2. Eligibility
 
-Castling is allowed only when:
+Castling is legal only when:
 
-- The original King is still on its original starting square.
-- The selected original Rook is still on its original starting square.
-- Neither piece has moved.
+- The original King is still present on its original starting square.
+- The selected original Rook is still present on its original starting square.
+- Neither piece has previously moved.
 - Neither piece has been captured.
-- Both travel routes are clear under the procedure described below.
+- Both travel routes are clear under the route-clearance procedure.
+- No third unit occupies any square in the union of the two routes.
 
-A Rook created through Pawn promotion cannot be used to regain a castling right.
+A promoted Rook cannot be used for castling.
 
-Moving a King or its corresponding original Rook permanently removes the relevant castling right.
+Castling rights are permanently lost when the original King or the corresponding original Rook moves or is captured.
 
-## 3. The Castling Procedure
+## 3. Castling Procedure
 
-Castling is treated as one atomic move, not as two separate moves.
+Castling is one atomic move. It is not performed as two separate moves.
 
 Follow these steps:
 
-### Step 1 — Select the Rook
+1. Identify the original King and the selected original Rook.
+2. Identify their respective destination squares.
+3. Determine the horizontal route from the King's starting square to its destination, including both endpoints.
+4. Determine the horizontal route from the Rook's starting square to its destination, including both endpoints.
+5. Temporarily remove both the King and the selected Rook from the board.
+6. Examine every square in the union of both routes.
+7. If any square in that union is occupied by a third unit, castling is illegal.
+8. If all required squares are clear, place the King and Rook on their destinations simultaneously.
 
-Choose either the original Kingside Rook or the original Queenside Rook.
+The two routes may overlap.
 
-### Step 2 — Check Eligibility
-
-Confirm that the original King and selected original Rook are still present on their starting squares and have never moved.
-
-### Step 3 — Remove Both Pieces Temporarily
-
-Temporarily remove the King and selected Rook from the board.
-
-This allows the procedure to handle positions where either piece would otherwise block the other's route.
-
-### Step 4 — Check Both Routes
-
-Check every square along:
-- The King’s route from its starting square to its destination.
-- The Rook’s route from its starting square to its destination.
-
-Both routes, including their destination squares, must be clear of every other unit.
-
-If a third unit occupies any square on either route, castling is not allowed.
-
-### Step 5 — Place Both Pieces
-
-If both routes are clear, place the King and Rook on their final squares simultaneously.
-
-The move is complete.
+The starting square of either castling piece may be the destination square of the other. This does not prevent castling because both pieces are temporarily removed before route clearance is checked.
 
 ## 4. Special Chess960 Situations
 
-The procedure supports positions in which a piece may already occupy its destination square.
+The procedure supports the following cases:
 
-### Stationary King
+- **Moving King and Rook:** Both pieces move to their respective destinations.
+- **Stationary King:** The King is already on its destination square and remains there while the Rook moves.
+- **Stationary Rook:** The Rook is already on its destination square and remains there while the King moves.
+- **King-Rook exchange:** The King and Rook exchange their starting squares.
 
-The King may already be on the g-file or c-file. It remains there while the Rook moves to its destination.
+All four situations are valid when the eligibility and route-clearance requirements are satisfied.
 
-### Stationary Rook
-
-The Rook may already be on the f-file or d-file. It remains there while the King moves to its destination.
-
-### King and Rook Exchange Squares
-
-The King and Rook may exchange their starting squares when their final destinations require it.
-
-Because both pieces are placed simultaneously, this is treated as one valid castling move if every other requirement is met.
+Castling remains one move regardless of how many pieces physically change squares.
 
 ## 5. Attacked Squares
 
@@ -95,12 +78,20 @@ A player may castle even when:
 
 This follows from FTW's non-royal King design. There are no check-related restrictions.
 
-## 6. Important Notes
+## 6. Castling Rights
 
-- Castling is one move and consumes one turn.
-- Both pieces must be eligible before the move.
-- Both routes must be clear after temporarily removing the King and Rook.
-- The two pieces must be placed simultaneously.
-- Once the King or selected original Rook has moved, that castling right cannot be restored.
+Each player starts with two castling rights: G-side and C-side.
 
-For the complete rules, see [RULES.md](../RULES.md).
+Castling rights are permanently lost as follows:
+
+- When the original King makes an ordinary move, both rights are lost.
+- When the original King is captured, both rights are lost.
+- When the original G-side Rook moves or is captured, the G-side right is lost.
+- When the original C-side Rook moves or is captured, the C-side right is lost.
+- When the King castles on either side, both castling rights are lost.
+
+The final rule applies even when the King does not physically change squares during castling.
+
+A lost right cannot be restored by returning a piece to its starting square.
+
+A promoted Rook cannot acquire an original Rook's castling rights.
