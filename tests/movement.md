@@ -410,20 +410,24 @@ e2-e4
 
 **Initial Position:**
 
-A White Pawn on e4 and a Black unit on e5.
+```text
+7k/8/8/4p3/4P3/8/8/7K
+```
 
 **Side to Move:** White
 
 **Action:**
 
 ```text
-7k/8/8/4p3/4P3/8/8/7K
+e4-e5
 ```
 
 **Expected Result:**
 
 - The move is illegal.
 - Pawns cannot capture by moving directly forward.
+- The destination square e5 is occupied by an opposing Pawn.
+- The board remains unchanged.
 
 **Status:** NOT RUN
 
