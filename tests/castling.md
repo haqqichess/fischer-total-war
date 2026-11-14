@@ -260,7 +260,7 @@ O-O
 - The King moves from f1 to g1.
 - The Rook moves from g1 to f1.
 - The two pieces are placed simultaneously.
-- Both castling rights are lost.
+- All remaining castling rights are lost; no castling rights remain.
 
 **Expected Final Placement:**
 
