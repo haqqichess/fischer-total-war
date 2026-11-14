@@ -58,6 +58,13 @@ This revision addresses ambiguities and inconsistencies identified during a stru
 - Specified Chess960-compatible FEN recording.
 - Clarified the information used to identify repeated positions.
 
+### Test Specifications
+
+- Added focused edge-case coverage for sliding-piece obstruction, capture stopping, Knight occupancy, Black Pawn direction, Pawn restrictions, and side-to-move position identity.
+- Replaced vague promotion examples with reproducible board positions and explicit promotion choices.
+- Clarified the 50-move and 75-move test thresholds as 100 and 150 consecutive plies respectively.
+- Added direct links to all test specifications from the README.
+
 This revision is a rules clarification and correction draft. It has not yet passed exhaustive implementation testing or practical playtesting.
 
 ## Earlier v1.0-alpha Draft — Revised for Playtesting
