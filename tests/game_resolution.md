@@ -342,22 +342,25 @@ Ra1-a4
 
 ### FTW-GAM-014 — Illegal Move Does Not Change Special Rights
 
-**Initial State:**
+**Initial Position:**
 
-Use a valid position containing:
+```text
+k7/8/8/3pP3/8/8/8/6KR
+```
 
-- At least one castling right.
-- A defined en passant state or other relevant game-state information.
+**Side to Move:** White
 
-**Action:**
+**State:** White has the G-side castling right. The Black Pawn on d5 has just advanced two squares from d7, and the White Pawn on e5 can capture en passant on d6.
 
-Attempt an illegal move.
+**Action:** Attempt the illegal King move `Kg1-g3`.
 
 **Expected Result:**
 
-- Castling rights remain unchanged.
-- En passant availability remains unchanged.
-- The board and position history remain unchanged.
+- The move is rejected because the King cannot move two squares.
+- The board and side to move remain unchanged.
+- White's G-side castling right remains available.
+- The usable en passant opportunity on d6 remains available.
+- The position history is unchanged.
 
 **Status:** NOT RUN
 
@@ -390,13 +393,17 @@ e2-e4
 
 ### FTW-GAM-016 — Castling State Is Updated Before Repetition Recording
 
-**Initial State:**
+**Initial Position:**
 
-A valid position with White eligible to castle.
+```text
+4k3/8/8/8/8/8/8/R3K2R
+```
 
-**Action:**
+**Side to Move:** White
 
-White performs a legal castling move.
+**Castling Rights:** White G-side and C-side.
+
+**Action:** White performs G-side castling (`O-O`).
 
 **Expected Result:**
 
@@ -409,13 +416,15 @@ White performs a legal castling move.
 
 ### FTW-GAM-017 — En Passant State Is Updated Before Repetition Recording
 
-**Initial State:**
+**Initial Position:**
 
-A valid position in which a Pawn makes a two-square advance.
+```text
+4k3/8/8/8/3p4/8/4P3/4K3
+```
 
-**Action:**
+**Side to Move:** White
 
-The Pawn completes its double-square advance.
+**Action:** White advances the Pawn from e2 to e4 (`e2-e4`). The Black Pawn on d4 is then able to capture en passant on e3.
 
 **Expected Result:**
 
