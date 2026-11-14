@@ -358,7 +358,9 @@ O-O
 
 **Initial Position:**
 
-A White King on e1, a White Rook on h1, and a third unit on g1.
+```text
+4k3/8/8/8/8/8/8/4K1nR
+```
 
 **Side to Move:** White
 
@@ -368,12 +370,24 @@ A White King on e1, a White Rook on h1, and a third unit on g1.
 White:G
 ```
 
+**Original Pieces:**
+
+```text
+White King: e1
+White G-side Rook: h1
+```
+
+**Action:**
+```text
+O-O
+```
+
 **Expected Result:**
 
 - Castling is illegal.
-- The third unit on g1 remains after temporarily removing the King and Rook.
-- The King cannot be placed on an occupied destination square.
-
+- The Black Knight on g1 remains after both castling pieces are temporarily removed.
+- The destination route is occupied by a third unit.
+- The board and castling rights remain unchanged.
 **Status:** NOT RUN
 
 ## 6. Attacked Squares
