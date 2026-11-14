@@ -1,9 +1,9 @@
 
 # Changelog
 
-All notable changes to Fischer Total War (FTW) are recorded here.
+All notable changes to Fischer Total War (FTW) are documented here.
 
-This project is currently in its experimental stage. Entries describe changes to the rules and documentation, not necessarily changes to a software implementation.
+This changelog records changes to the rules and documentation. It does not necessarily describe changes to a software implementation.
 
 ## v1.0-alpha — Red Team Revision Draft
 
@@ -13,48 +13,62 @@ This project is currently in its experimental stage. Entries describe changes to
 This revision addresses ambiguities and inconsistencies identified during a structured review of the previous rules draft.
 
 ### Movement and Captures
+
 - Defined legal moves independently of traditional check and self-check restrictions.
 - Specified movement, obstruction, occupancy, and capture rules for every piece.
 - Clarified King adjacency and King capture.
+- Defined Pawn movement and capture more explicitly.
 
 ### Castling
+
 - Introduced G-side and C-side terminology.
-- Formalized the route-clearance procedure.
+- Formalized the castling route-clearance procedure.
 - Defined simultaneous placement of the King and Rook.
 - Clarified overlapping routes and stationary castling pieces.
 - Specified permanent castling-right loss, including after castling itself.
-
-### Special Moves
-- Clarified Pawn movement and capture.
-- Defined en passant availability and expiration.
-- Specified promotion as part of the move that reaches the final rank.
 - Confirmed that promoted Rooks cannot regain original Rook castling rights.
 
+### Special Moves
+
+- Clarified en passant availability and expiration.
+- Confirmed that an available en passant capture is a legal move.
+- Defined Pawn promotion as part of the move that reaches the final rank.
+- Restricted promotion to Queen, Rook, Bishop, or Knight.
+
 ### Forced Pass and Draws
+
 - Formalized forced-pass resolution.
 - Defined mutual immobility using a hypothetical pass.
 - Clarified Bishop-lock requirements.
 - Defined position identity for repetition tracking.
-- Clarified threefold claims and automatic fivefold repetition.
+- Clarified claimable threefold repetition.
+- Clarified automatic fivefold repetition.
+- Confirmed that no 50-move or 75-move rule is used.
 
 ### Game Resolution
+
 - Established a consistent order for completing moves, updating game state, recording positions, and evaluating game-ending conditions.
 - Added core illegal-move handling.
-- Clarified the boundary between gameplay rules and competition administration.
+- Clarified the priority of total elimination over draw conditions.
+- Defined the boundary between gameplay rules and competition administration.
 
 ### Position Recording
+
 - Adopted Scharnagl numbering for Chess960 starting positions.
 - Specified Chess960-compatible FEN recording.
+- Clarified the information used to identify repeated positions.
 
 This revision is a rules clarification and correction draft. It has not yet passed exhaustive implementation testing or practical playtesting.
 
-## v1.0-alpha — Revised for Playtesting
+## Earlier v1.0-alpha Draft — Revised for Playtesting
 
-**Status:** Experimental
+**Date:** November 12, 2026  
+**Status:** Superseded by the Red Team Revision Draft
 
-This version establishes the current rules draft for public discussion and playtesting.
+This earlier draft established the first complete experimental ruleset for public discussion and playtesting.
 
 ### Core Rules
+
 - Introduced total elimination as the victory condition.
 - Adopted Chess960 starting positions.
 - Made the King a non-royal unit that can be captured.
@@ -62,13 +76,15 @@ This version establishes the current rules draft for public discussion and playt
 - Allowed play to continue after a King is captured.
 
 ### Movement and Special Rules
+
 - Retained standard movement and captures for all pieces.
-- Defined an adapted Chess960 castling procedure.
-- Retained standard en passant with an expiration rule for forced passes.
+- Introduced an adapted Chess960 castling procedure.
+- Retained standard en passant with a forced-pass expiration clause.
 - Allowed promotion to a Queen, Rook, Bishop, or Knight.
 - Introduced automatic forced passes when a player has no legal moves.
 
 ### Draw Conditions
+
 - Added the conservative Bishop-lock condition.
 - Added claimable threefold repetition.
 - Added automatic fivefold repetition.
@@ -76,10 +92,13 @@ This version establishes the current rules draft for public discussion and playt
 - Excluded the 50-move and 75-move rules.
 
 ### Documentation
-- Established the rules draft and supporting design documents.
+
+- Established the initial rules document and supporting design documents.
 - Added terminology and contribution guidelines.
-- Published the documentation under CC BY 4.0.
+- Selected CC BY 4.0 for the project documentation.
+
+This draft was replaced after the Red Team review identified ambiguities and implementation concerns.
 
 ---
 
-Earlier development notes may be added here as the rules evolve.
+Further changes will be recorded here as the rules evolve.
