@@ -29,7 +29,7 @@ For these tests, castling rights and original piece identities must be recorded 
 **Initial Position:**
 
 ```text
-4k3/8/8/8/8/8/8/4K2R
+4k3/8/8/8/8/8/8/R3K2R
 ```
 
 **Side to Move:** White
@@ -38,6 +38,7 @@ For these tests, castling rights and original piece identities must be recorded 
 
 ```text
 White:G
+White:C
 ```
 
 **Original Pieces:**
@@ -45,6 +46,7 @@ White:G
 ```text
 White King: e1
 White G-side Rook: h1
+White C-side Rook: a1
 ```
 
 **Action:**
@@ -55,17 +57,23 @@ O-O
 
 **Expected Result:**
 
-- Castling is legal.
-- Both pieces are temporarily removed.
-- The routes are clear of third units.
+- G-side castling is legal.
 - The King finishes on g1.
-- The Rook finishes on f1.
-- Both of White's castling rights are lost.
+- The G-side Rook finishes on f1.
+- The C-side Rook remains on a1.
+- Both White castling rights are permanently lost.
+- The remaining Rook on a1 cannot castle later.
 
 **Expected Final Placement:**
 
 ```text
-4k3/8/8/8/8/8/8/5RK1
+4k3/8/8/8/8/8/8/R4RK1
+```
+
+**Expected Castling Rights:**
+
+```text
+None
 ```
 
 **Status:** NOT RUN
@@ -77,7 +85,7 @@ O-O
 **Initial Position:**
 
 ```text
-4k3/8/8/8/8/8/8/R3K3
+4k3/8/8/8/8/8/8/R3K2R
 ```
 
 **Side to Move:** White
@@ -85,6 +93,7 @@ O-O
 **Castling Rights:**
 
 ```text
+White:G
 White:C
 ```
 
@@ -92,6 +101,7 @@ White:C
 
 ```text
 White King: e1
+White G-side Rook: h1
 White C-side Rook: a1
 ```
 
@@ -103,16 +113,23 @@ O-O-O
 
 **Expected Result:**
 
-- Castling is legal.
-- Both routes are clear.
+- C-side castling is legal.
 - The King finishes on c1.
-- The Rook finishes on d1.
-- Both of White's castling rights are lost.
+- The C-side Rook finishes on d1.
+- The G-side Rook remains on h1.
+- Both White castling rights are permanently lost.
+- The remaining Rook on h1 cannot castle later.
 
 **Expected Final Placement:**
 
 ```text
-4k3/8/8/8/8/8/8/2KR4
+4k3/8/8/8/8/8/8/2KR3R
+```
+
+**Expected Castling Rights:**
+
+```text
+None
 ```
 
 **Status:** NOT RUN
