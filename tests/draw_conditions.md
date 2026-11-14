@@ -265,7 +265,7 @@ Ke7-e8
 
 **Side to Move:** White
 
-**Position A:**
+**Position A:** The Black Pawn on d5 has just advanced two squares from d7, so the en passant target is d6.
 
 ```text
 En Passant:
