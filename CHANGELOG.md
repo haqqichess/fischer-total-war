@@ -48,6 +48,7 @@ This revision addresses ambiguities and inconsistencies identified during a stru
 ### Game Resolution
 
 - Established a consistent order for completing moves, updating game state, recording positions, and evaluating game-ending conditions.
+- Separated position-based automatic draw checks (Bishop-lock and fivefold repetition) from turn-start mutual-immobility evaluation.
 - Added core illegal-move handling.
 - Clarified the priority of total elimination over draw conditions.
 - Defined the boundary between gameplay rules and competition administration.
