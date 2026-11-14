@@ -30,24 +30,28 @@ A player wins when the opponent has no units remaining. Capturing the King alone
 
 ## What Makes FTW Different?
 
-- **Total elimination:** The game is won by removing every opposing unit, not by checkmate.
-- **Chess960 setup:** The game begins with one of the 960 valid Chess960 starting positions.
+- **Total elimination:** Win by removing every opposing unit.
+- **Chess960 setup:** Choose from 960 valid starting positions, identified using Scharnagl numbering.
 - **Non-royal King:** The King can enter attacked squares and can be captured.
-- **No check or checkmate:** There are no check restrictions or checkmate conditions.
-- **Kingless play:** A player can continue playing after losing their King.
-- **Forced pass:** A player with no legal moves automatically loses their turn.
+- **No self-check restrictions:** Players do not have to protect their King.
+- **Kingless play:** A player can continue after losing their King.
+- **Adapted castling:** Chess960 castling uses a defined simultaneous-placement procedure without attacked-square restrictions.
+- **Forced pass:** A player with no legal moves automatically loses their turn unless mutual immobility ends the game.
+- **Defined draw conditions:** Bishop-lock, threefold repetition, fivefold repetition, and mutual immobility.
 
 ## Quick Rules Overview
 
-- The board and piece movements follow standard chess.
-- Both sides use the same Chess960 back-rank arrangement.
-- Pawns begin on their usual starting ranks.
-- Captures follow normal chess movement rules.
-- Castling follows an adapted Chess960 procedure.
-- Pawns can promote to a Queen, Rook, Bishop, or Knight.
-- En passant is available under standard conditions.
-- A player with no legal move must pass automatically.
-- Draws are governed by the specific conditions listed in the rules.
+- FTW uses a standard 8×8 chessboard.
+- The starting position is one of 960 Chess960 arrangements, identified by its Scharnagl position ID.
+- Both players use the same back-rank file arrangement.
+- All pieces retain their defined chess movement patterns.
+- There are no check, checkmate, or self-check restrictions.
+- The King can be captured without ending the game if its owner still has other units.
+- Castling is performed as one atomic move under the adapted Chess960 procedure.
+- En passant follows the standard capture pattern and expires when the eligible turn ends.
+- Pawns promote to a Queen, Rook, Bishop, or Knight.
+- A player with no legal moves must pass automatically unless mutual immobility applies.
+- Repetition positions include piece placement, side to move, castling rights, and usable en passant opportunities.
 
 For the complete rules, see [RULES.md](RULES.md).
 
