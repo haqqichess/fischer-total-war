@@ -70,7 +70,7 @@ e1-e2
 **Initial Position:**
 
 ```text
-8/8/8/8/8/8/4r3/4K3
+5r1k/8/8/8/8/8/8/4K3
 ```
 
 **Side to Move:** White
@@ -78,15 +78,15 @@ e1-e2
 **Action:**
 
 ```text
-e1-e2
+e1-f1
 ```
 
 **Expected Result:**
 
 - The move is legal.
-- The White King moves onto the square occupied by the Black Rook only if it captures that Rook.
-- If the destination contains an opposing unit, the action must be treated as a capture.
-- Being attacked by another unit does not invalidate the move.
+- The White King moves to f1.
+- The Black Rook on f8 attacks f1.
+- The attacked destination square does not make the move illegal.
 
 **Status:** NOT RUN
 
@@ -117,12 +117,12 @@ e2-a2
 
 **Status:** NOT RUN
 
-### FTW-MOV-005 — No Self-Check Filtering
+### FTW-MOV-005 — A Player May Move While Their King Is Attacked
 
 **Initial Position:**
 
 ```text
-k3r3/8/8/8/8/8/4R3/4K3
+k7/8/8/8/8/8/8/r3K1N1
 ```
 
 **Side to Move:** White
@@ -130,14 +130,15 @@ k3r3/8/8/8/8/8/4R3/4K3
 **Action:**
 
 ```text
-e2-e3
+Ng1-f3
 ```
 
 **Expected Result:**
 
 - The move is legal.
-- The move may alter the line of attack.
-- The implementation must not apply traditional pin or self-check filtering.
+- The WHite king on e1 is attacked by the Black Rook on a1.
+- The White Knight may move normally.
+- No self-check restriction is applied.
 
 **Status:** NOT RUN
 
@@ -416,7 +417,7 @@ A White Pawn on e4 and a Black unit on e5.
 **Action:**
 
 ```text
-e4-e5
+7k/8/8/4p3/4P3/8/8/7K
 ```
 
 **Expected Result:**
